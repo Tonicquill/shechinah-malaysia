@@ -200,6 +200,9 @@ button{font:inherit;cursor:pointer;border:none;background:none}
 .media-card .mc-date{font-family:var(--font-display);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--gold)}
 .media-card .mc-arrow{position:absolute;bottom:20px;right:20px;width:32px;height:32px;border-radius:50%;background:var(--gray-bg);display:flex;align-items:center;justify-content:center;color:var(--gray);font-size:14px;transition:all 0.3s var(--ease-fluid)}
 .media-card:hover .mc-arrow{background:var(--mc-accent,var(--green));color:#fff;transform:translateX(2px)}
+.media-card .mc-thumb{width:100%;height:160px;object-fit:cover;border-radius:10px;margin-bottom:16px;transition:transform 0.4s var(--ease-fluid)}
+.media-card:hover .mc-thumb{transform:scale(1.02)}
+.media-card .mc-caption{font-size:11px;color:var(--gray-light);font-style:italic;margin-top:8px;line-height:1.4;border-top:1px solid var(--gray-border);padding-top:8px}
 
 /* ===== DONATE CTA ===== */
 .cta-section{background:var(--ink);color:var(--white);text-align:center;padding:100px 0}
@@ -595,15 +598,19 @@ body.loading{overflow:hidden}
 
     <div class="media-grid">
       <a href="https://www.thestar.com.my/news/nation/2023/02/16/halfway-house-helps-rebuild-lives-after-prison" target="_blank" rel="noopener" class="media-card reveal reveal-delay-1" style="display:block;--mc-accent:#0055A4">
+        <img src="assets/thestar-feb2023.webp" alt="R. Applasamy — featured in The Star article about Shechinah's Halfway House" class="mc-thumb" loading="lazy">
         <div class="mc-outlet">The Star</div>
         <div class="mc-headline">"Halfway house helps rebuild lives after prison — ex-addicts and former inmates find a second chance in Johor Bahru."</div>
-        <div class="mc-date">February 2023</div>
+        <div class="mc-date">February 2023 · Venesa Devi</div>
+        <div class="mc-caption">At 19, R. Applasamy started selling drugs. At 23, his first prison sentence. Shechinah gave him a path back.</div>
         <div class="mc-arrow">→</div>
       </a>
       <a href="https://www.thestar.com.my/news/nation/2023/03/11/a-lifeline-is-all-they-ask-for" target="_blank" rel="noopener" class="media-card reveal reveal-delay-2" style="display:block;--mc-accent:#0055A4">
+        <img src="assets/thestar-mar2023.webp" alt="S. Yokendhan — featured in The Star article about Shechinah's outreach" class="mc-thumb" loading="lazy">
         <div class="mc-outlet">The Star</div>
         <div class="mc-headline">"A lifeline is all they ask for — how Shechinah's outreach provides shelter and hope for JB's homeless."</div>
-        <div class="mc-date">March 2023</div>
+        <div class="mc-date">March 2023 · Venesa Devi</div>
+        <div class="mc-caption">A clean slate: Yokendhan hopes to be given a second chance so he can earn a living. — THOMAS YONG/The Star</div>
         <div class="mc-arrow">→</div>
       </a>
       <a href="https://sokong.org/articles/shechinah-association-sowing-seeds-of-hope-for-the-downtrodden" target="_blank" rel="noopener" class="media-card reveal reveal-delay-3" style="display:block;--mc-accent:#669F38">
