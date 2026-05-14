@@ -191,11 +191,15 @@ button{font:inherit;cursor:pointer;border:none;background:none}
 /* ===== MEDIA ===== */
 .media-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 @media(max-width:768px){.media-grid{grid-template-columns:1fr}}
-.media-card{background:var(--white);border:1px solid var(--gray-border);border-radius:14px;padding:28px;transition:all 0.3s var(--ease-fluid)}
-.media-card:hover{box-shadow:0 8px 30px rgba(0,0,0,0.04)}
-.media-card .mc-outlet{font-family:var(--font-display);font-weight:800;font-size:16px;color:var(--ink);margin-bottom:8px}
-.media-card .mc-headline{font-size:14px;color:var(--gray);line-height:1.5;margin-bottom:12px}
+.media-card{background:var(--white);border:1px solid var(--gray-border);border-radius:14px;padding:28px;transition:all 0.3s var(--ease-fluid);position:relative;overflow:hidden}
+.media-card:hover{box-shadow:0 8px 30px rgba(0,0,0,0.04);border-color:#d1d5db}
+.media-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--mc-accent,var(--green));border-radius:14px 14px 0 0}
+.media-card .mc-outlet{font-family:var(--font-display);font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:0.1em;color:var(--mc-accent,var(--ink));margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.media-card .mc-outlet::before{content:'';display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--mc-accent,var(--green))}
+.media-card .mc-headline{font-size:14px;color:var(--gray);line-height:1.55;margin-bottom:14px}
 .media-card .mc-date{font-family:var(--font-display);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--gold)}
+.media-card .mc-arrow{position:absolute;bottom:20px;right:20px;width:32px;height:32px;border-radius:50%;background:var(--gray-bg);display:flex;align-items:center;justify-content:center;color:var(--gray);font-size:14px;transition:all 0.3s var(--ease-fluid)}
+.media-card:hover .mc-arrow{background:var(--mc-accent,var(--green));color:#fff;transform:translateX(2px)}
 
 /* ===== DONATE CTA ===== */
 .cta-section{background:var(--ink);color:var(--white);text-align:center;padding:100px 0}
@@ -309,12 +313,14 @@ body.loading{overflow:hidden}
 .gallery-overlay span{font-family:var(--font-display);font-size:12px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:0.08em}
 
 /* ===== LIGHTBOX ===== */
-.lightbox{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.92);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity 0.4s,visibility 0.4s;padding:24px}
+.lightbox{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.92);backdrop-filter:blur(12px);display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity 0.4s,visibility 0.4s;padding:24px}
 .lightbox.active{opacity:1;visibility:visible}
-.lightbox img{max-width:90vw;max-height:85vh;object-fit:contain;border-radius:12px;transform:scale(0.92);transition:transform 0.4s var(--ease-fluid)}
+.lightbox img{max-width:90vw;max-height:75vh;object-fit:contain;border-radius:12px;transform:scale(0.92);transition:transform 0.4s var(--ease-fluid)}
 .lightbox.active img{transform:scale(1)}
 .lightbox-close{position:absolute;top:24px;right:24px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s}
 .lightbox-close:hover{background:rgba(255,255,255,0.2)}
+.lightbox-caption{font-family:var(--font-display);font-size:14px;color:rgba(255,255,255,0.7);margin-top:16px;text-align:center;max-width:600px;line-height:1.5;opacity:0;transform:translateY(8px);transition:opacity 0.4s 0.1s,transform 0.4s 0.1s}
+.lightbox.active .lightbox-caption{opacity:1;transform:translateY(0)}
 
 /* ===== TESTIMONIALS ===== */
 .testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -588,20 +594,23 @@ body.loading{overflow:hidden}
     <h2 class="section-title reveal reveal-delay-1">James and Shechinah <span class="st-green">in the news</span>.</h2>
 
     <div class="media-grid">
-      <a href="https://www.thestar.com.my/news/nation/2023/02/16/halfway-house-helps-rebuild-lives-after-prison" target="_blank" rel="noopener" class="media-card reveal reveal-delay-1" style="display:block">
+      <a href="https://www.thestar.com.my/news/nation/2023/02/16/halfway-house-helps-rebuild-lives-after-prison" target="_blank" rel="noopener" class="media-card reveal reveal-delay-1" style="display:block;--mc-accent:#0055A4">
         <div class="mc-outlet">The Star</div>
         <div class="mc-headline">"Halfway house helps rebuild lives after prison — ex-addicts and former inmates find a second chance in Johor Bahru."</div>
         <div class="mc-date">February 2023</div>
+        <div class="mc-arrow">→</div>
       </a>
-      <a href="https://www.thestar.com.my/news/nation/2023/03/11/a-lifeline-is-all-they-ask-for" target="_blank" rel="noopener" class="media-card reveal reveal-delay-2" style="display:block">
+      <a href="https://www.thestar.com.my/news/nation/2023/03/11/a-lifeline-is-all-they-ask-for" target="_blank" rel="noopener" class="media-card reveal reveal-delay-2" style="display:block;--mc-accent:#0055A4">
         <div class="mc-outlet">The Star</div>
         <div class="mc-headline">"A lifeline is all they ask for — how Shechinah's outreach provides shelter and hope for JB's homeless."</div>
         <div class="mc-date">March 2023</div>
+        <div class="mc-arrow">→</div>
       </a>
-      <a href="https://sokong.org/articles/shechinah-association-sowing-seeds-of-hope-for-the-downtrodden" target="_blank" rel="noopener" class="media-card reveal reveal-delay-3" style="display:block">
+      <a href="https://sokong.org/articles/shechinah-association-sowing-seeds-of-hope-for-the-downtrodden" target="_blank" rel="noopener" class="media-card reveal reveal-delay-3" style="display:block;--mc-accent:#669F38">
         <div class="mc-outlet">Sokong.org</div>
         <div class="mc-headline">"Sowing seeds of hope for the downtrodden — a closer look at Shechinah's work across Johor."</div>
         <div class="mc-date">2023</div>
+        <div class="mc-arrow">→</div>
       </a>
     </div>
   </div>
@@ -621,35 +630,35 @@ body.loading{overflow:hidden}
     <p class="section-label reveal">Moments</p>
     <h2 class="section-title reveal reveal-delay-1">Snapshots of <span class="st-green">hope</span> in action.</h2>
     <div class="gallery-grid">
-      <div class="gallery-item reveal" data-lightbox="assets/gallery1.jpg">
+      <div class="gallery-item reveal" data-lightbox="assets/gallery1.jpg" data-caption="Volunteer Outreach">
         <img src="assets/gallery1.jpg" alt="Shechinah volunteers at work" loading="lazy">
         <div class="gallery-overlay"><span>Volunteer Outreach</span></div>
       </div>
-      <div class="gallery-item reveal reveal-delay-1" data-lightbox="assets/gallery2.jpg">
+      <div class="gallery-item reveal reveal-delay-1" data-lightbox="assets/gallery2.jpg" data-caption="Community Gathering">
         <img src="assets/gallery2.jpg" alt="Community gathering" loading="lazy">
         <div class="gallery-overlay"><span>Community Gathering</span></div>
       </div>
-      <div class="gallery-item reveal reveal-delay-2" data-lightbox="assets/halfway-house.jpeg">
+      <div class="gallery-item reveal reveal-delay-2" data-lightbox="assets/halfway-house.jpeg" data-caption="Halfway House Programme">
         <img src="assets/halfway-house.jpeg" alt="Halfway House programme" loading="lazy">
         <div class="gallery-overlay"><span>Halfway House</span></div>
       </div>
-      <div class="gallery-item reveal reveal-delay-3" data-lightbox="assets/group-certificates.jpg">
+      <div class="gallery-item reveal reveal-delay-3" data-lightbox="assets/group-certificates.jpg" data-caption="Programme Graduation">
         <img src="assets/group-certificates.jpg" alt="Programme graduation" loading="lazy">
         <div class="gallery-overlay"><span>Graduation Day</span></div>
       </div>
-      <div class="gallery-item reveal" data-lightbox="assets/prayer.jpg">
+      <div class="gallery-item reveal" data-lightbox="assets/prayer.jpg" data-caption="Prayer &amp; Counselling">
         <img src="assets/prayer.jpg" alt="Prayer and counselling" loading="lazy">
         <div class="gallery-overlay"><span>Prayer &amp; Counselling</span></div>
       </div>
-      <div class="gallery-item reveal reveal-delay-1" data-lightbox="assets/rural-development.jpeg">
+      <div class="gallery-item reveal reveal-delay-1" data-lightbox="assets/rural-development.jpeg" data-caption="Rural Outreach">
         <img src="assets/rural-development.jpeg" alt="Rural development" loading="lazy">
         <div class="gallery-overlay"><span>Rural Outreach</span></div>
       </div>
-      <div class="gallery-item reveal reveal-delay-2" data-lightbox="assets/skill-programs.jpeg">
+      <div class="gallery-item reveal reveal-delay-2" data-lightbox="assets/skill-programs.jpeg" data-caption="Skills Training">
         <img src="assets/skill-programs.jpeg" alt="Skills training" loading="lazy">
         <div class="gallery-overlay"><span>Skills Training</span></div>
       </div>
-      <div class="gallery-item reveal reveal-delay-3" data-lightbox="assets/seeds.jpg">
+      <div class="gallery-item reveal reveal-delay-3" data-lightbox="assets/seeds.jpg" data-caption="Seeds of Hope">
         <img src="assets/seeds.jpg" alt="Planting seeds of hope" loading="lazy">
         <div class="gallery-overlay"><span>Seeds of Hope</span></div>
       </div>
@@ -932,10 +941,15 @@ body.loading{overflow:hidden}
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightboxImg');
   const lightboxClose = document.getElementById('lightboxClose');
+  const lightboxCaption = document.getElementById('lightboxCaption');
 
-  function openLightbox(src) {
+  function openLightbox(src, caption) {
     if (!lightbox || !lightboxImg) return;
     lightboxImg.src = src;
+    if (lightboxCaption) {
+      lightboxCaption.textContent = caption || '';
+      lightboxCaption.style.display = caption ? 'block' : 'none';
+    }
     lightbox.classList.add('active');
     lightbox.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
@@ -949,7 +963,7 @@ body.loading{overflow:hidden}
   }
 
   document.querySelectorAll('[data-lightbox]').forEach(item => {
-    item.addEventListener('click', () => openLightbox(item.dataset.lightbox));
+    item.addEventListener('click', () => openLightbox(item.dataset.lightbox, item.dataset.caption));
   });
 
   if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
@@ -974,6 +988,7 @@ body.loading{overflow:hidden}
 <div class="lightbox" id="lightbox" aria-hidden="true">
   <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
   <img src="" alt="" id="lightboxImg">
+  <p class="lightbox-caption" id="lightboxCaption"></p>
 </div>
 
 </body>
