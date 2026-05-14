@@ -314,7 +314,7 @@ body.loading{overflow:hidden}
 .gallery-item:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 16px 40px rgba(0,0,0,0.12)}
 .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s var(--ease-fluid)}
 .gallery-item:hover img{transform:scale(1.08)}
-.gallery-item::after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 50%,rgba(0,0,0,0.4));opacity:0;transition:opacity 0.3s}
+.gallery-item::after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 50%,rgba(0,0,0,0.4));opacity:0;transition:opacity 0.3s;pointer-events:none}
 .gallery-item:hover::after{opacity:1}
 .gallery-overlay{position:absolute;bottom:0;left:0;right:0;padding:20px;z-index:2;transform:translateY(100%);transition:transform 0.4s var(--ease-fluid)}
 .gallery-item:hover .gallery-overlay{transform:translateY(0)}
@@ -418,7 +418,7 @@ body.loading{overflow:hidden}
 <nav class="nav" id="nav">
   <div class="nav-inner">
     <a href="#" class="nav-logo" aria-label="Shechinah Malaysia Home">
-      <img src="original_images/logo-transparent-bg.png" alt="Shechinah logo" width="142" height="32" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" style="background:var(--ink);padding:6px 12px;border-radius:8px">
+      <img src="original_images/logo-ppm-transbg-240x70-1.png" alt="Shechinah logo" width="142" height="32" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" style="background:var(--ink);padding:6px 12px;border-radius:8px">
       <span style="display:none;font-family:var(--font-display);font-weight:900;font-size:18px;color:var(--ink);letter-spacing:-0.02em">Shechinah<span style="color:var(--green)">.</span></span>
     </a>
     <div class="nav-links">
@@ -460,7 +460,7 @@ body.loading{overflow:hidden}
   <div class="hero-overlay"></div>
   <div class="hero-mesh"></div>
   <div class="hero-content">
-    <img src="original_images/logo-transparent-bg.png" alt="Shechinah Malaysia" class="hero-logo reveal" style="width:clamp(180px,25vw,320px);height:auto;margin-bottom:20px;filter:drop-shadow(0 4px 20px rgba(0,0,0,0.4))" onerror="this.style.display='none'">
+    <img src="original_images/logo-with-ppm-transbg-300x200-1.png" alt="Shechinah Malaysia" class="hero-logo reveal" style="width:clamp(180px,22vw,280px);height:auto;margin-bottom:20px;filter:drop-shadow(0 4px 20px rgba(0,0,0,0.5))" onerror="this.style.display='none'">
     <p class="hero-badge reveal">Pertubuhan Kebajikan Shechinah Johor Bahru &middot; PPM-006-01-19042018</p>
     <h1 class="hero-headline reveal reveal-delay-1">
       <span class="hl-white">Giving</span> <span class="hl-green">Hope,</span><br>
@@ -720,7 +720,7 @@ body.loading{overflow:hidden}
 
     <div class="blog-grid">
       <article class="blog-card reveal">
-        <img src="assets/fb/fb-fire-shalom.jpg" alt="Fire damage at Shalom Ria Old Folks Home requiring emergency relocation" class="blog-card-img" loading="lazy">
+        <img src="original_images/gallery11.jpg" alt="Fire damage at Shalom Ria Old Folks Home requiring emergency relocation" class="blog-card-img" loading="lazy">
         <div class="blog-card-body">
           <div class="blog-card-date">Emergency Update · Facebook</div>
           <p class="blog-card-text"><strong>A recent fire left the Shalom Ria Old Folks Home unsafe for living,</strong> forcing the elderly residents and OKU occupants to be temporarily relocated. It was a difficult time… <strong>Shechinah stepped in to provide emergency food, temporary shelter coordination, and volunteer support</strong> during the relocation period. When crisis hits the most vulnerable, response speed matters.</p>
@@ -730,7 +730,7 @@ body.loading{overflow:hidden}
       </article>
 
       <article class="blog-card reveal reveal-delay-1">
-        <img src="assets/fb/fb-every-life.jpg" alt="Every life has a story — Shechinah restoration video" class="blog-card-img" loading="lazy">
+        <img src="original_images/prayer.jpg" alt="Every life has a story — Shechinah restoration" class="blog-card-img" loading="lazy">
         <div class="blog-card-body">
           <div class="blog-card-date">Story · Facebook Video</div>
           <p class="blog-card-text"><strong>Every life has a story. Some stories fall apart before they are rebuilt again.</strong> This video shares the journey of individuals who walked through brokenness and found restoration through community, counselling, and consistent care. <strong>Restoration is not instant — it is built one decision, one volunteer, one meal at a time.</strong></p>
@@ -740,7 +740,7 @@ body.loading{overflow:hidden}
       </article>
 
       <article class="blog-card reveal reveal-delay-2">
-        <img src="assets/fb/fb-donation-qr.jpg" alt="Shechinah Malaysia DuitNow QR code for donations" class="blog-card-img" loading="lazy">
+        <img src="original_images/1-2.jpg" alt="Shechinah Malaysia community outreach and donation support" class="blog-card-img" loading="lazy">
         <div class="blog-card-body">
           <div class="blog-card-date">Donation · Facebook</div>
           <p class="blog-card-text"><strong>Donations made easy with our new QR!</strong> Scan to donate and support our charity. Every contribution goes directly to shelter operations, meal distribution, and rural outreach. No administrative overhead — <strong>just direct help for real people.</strong> Bank transfer details also available for corporate donors.</p>
@@ -842,9 +842,9 @@ body.loading{overflow:hidden}
         <img src="assets/gallery1.jpg" alt="Shechinah volunteers at work distributing food and supplies" loading="lazy">
         <div class="gallery-overlay"><span>Volunteer Outreach</span></div>
       </div>
-      <div class="gallery-item reveal reveal-delay-1" data-lightbox="assets/fb/fb-fire-shalom.jpg" data-caption="Emergency response after fire at Shalom Ria Old Folks Home">
-        <img src="assets/fb/fb-fire-shalom.jpg" alt="Shechinah emergency response team at Shalom Ria Old Folks Home fire scene" loading="lazy">
-        <div class="gallery-overlay"><span>Emergency Response · Shalom Fire</span></div>
+      <div class="gallery-item reveal reveal-delay-1" data-lightbox="original_images/gallery9.jpg" data-caption="Volunteer outreach in the community">
+        <img src="original_images/gallery9.jpg" alt="Shechinah volunteers during community outreach programme" loading="lazy">
+        <div class="gallery-overlay"><span>Community Outreach</span></div>
       </div>
       <div class="gallery-item reveal reveal-delay-2" data-lightbox="assets/halfway-house.jpeg" data-caption="Halfway House Programme — daily life and rehabilitation">
         <img src="assets/halfway-house.jpeg" alt="Halfway House programme residents in daily rehabilitation activities" loading="lazy">
@@ -866,9 +866,9 @@ body.loading{overflow:hidden}
         <img src="assets/skill-programs.jpeg" alt="Shechinah vocational skills training session for residents and rural youth" loading="lazy">
         <div class="gallery-overlay"><span>Skills Training</span></div>
       </div>
-      <div class="gallery-item reveal reveal-delay-3" data-lightbox="assets/fb/fb-donation-qr.jpg" data-caption="DuitNow QR Code for Donations">
-        <img src="assets/fb/fb-donation-qr.jpg" alt="Shechinah Malaysia DuitNow donation QR code for instant bank transfer" loading="lazy">
-        <div class="gallery-overlay"><span>Donate via QR</span></div>
+      <div class="gallery-item reveal reveal-delay-3" data-lightbox="original_images/gallery10.jpg" data-caption="Youth skills programme graduation">
+        <img src="original_images/gallery10.jpg" alt="Shechinah youth skills programme graduation ceremony" loading="lazy">
+        <div class="gallery-overlay"><span>Youth Graduation</span></div>
       </div>
     </div>
   </div>
