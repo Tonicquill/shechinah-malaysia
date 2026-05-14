@@ -20,27 +20,27 @@
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
-  "@type":"Organization",
+  "@type":"NGO",
   "name":"Pertubuhan Kebajikan Shechinah Johor Bahru",
   "alternateName":"Shechinah Malaysia",
   "url":"https://tonicquill.github.io/shechinah-malaysia/",
   "logo":"https://tonicquill.github.io/shechinah-malaysia/assets/logo.png",
-  "description":"A registered Malaysian charity providing shelter, meals, and restoration for the homeless, hungry, and forgotten since 2018.",
+  "description":"A registered Malaysian charity providing shelter, meals, and restoration for the homeless, hungry, and forgotten since 2018. Operates a Halfway House, Meals of Hope programme, Rural People Development, Prayer & Counselling, and Skills & Vocational training across Johor Bahru and rural Johor.",
   "foundingDate":"2018",
   "founder":{"@type":"Person","name":"James Issachar"},
+  "knowsAbout":["Homeless shelter","Addiction recovery","Orang Asli development","Food security","Vocational training","Crisis counselling"],
+  "areaServed":{"@type":"City","name":"Johor Bahru","containedInPlace":{"@type":"State","name":"Johor","containedInPlace":{"@type":"Country","name":"Malaysia"}}},
   "sameAs":[
     "https://www.facebook.com/shechinahmalaysia",
     "https://www.instagram.com/shechinahmalaysia/",
     "https://www.tiktok.com/@shechinahmalaysia",
     "https://www.youtube.com/@shechinahmalaysia"
   ],
-  "address":{
-    "@type":"PostalAddress",
-    "streetAddress":"32, Jalan Abdul Samad",
-    "addressLocality":"Johor Bahru",
-    "postalCode":"80100",
-    "addressCountry":"MY"
-  }
+  "address":[
+    {"@type":"PostalAddress","name":"Half Way House","streetAddress":"32, Jalan Abdul Samad","addressLocality":"Johor Bahru","postalCode":"80100","addressCountry":"MY"},
+    {"@type":"PostalAddress","name":"Office","streetAddress":"No. 09-03, Block C, Kompleks Austin Perdana","addressLocality":"Johor Bahru","postalCode":"81100","addressCountry":"MY"}
+  ],
+  "contactPoint":{"@type":"ContactPoint","telephone":"+60167160462","contactType":"General Inquiries","availableLanguage":"English, Malay, Tamil, Mandarin"}
 }
 </script>
 
@@ -357,6 +357,41 @@ body.loading{overflow:hidden}
 .contact-info-item h4{font-family:var(--font-display);font-weight:700;font-size:14px;margin-bottom:6px}
 .contact-info-item p{font-size:14px;color:var(--gray);line-height:1.6}
 
+/* ===== PILLARS / WHAT WE DO ===== */
+.pillars-section{background:linear-gradient(180deg,var(--white) 0%,var(--gray-bg) 100%)}
+.pillar{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:80px}
+.pillar:nth-child(even){direction:rtl}
+.pillar:nth-child(even) > *{direction:ltr}
+@media(max-width:768px){.pillar{grid-template-columns:1fr;gap:32px;margin-bottom:64px}.pillar:nth-child(even){direction:ltr}}
+.pillar-img{width:100%;border-radius:20px;object-fit:cover;min-height:360px;box-shadow:0 12px 40px rgba(0,0,0,0.08);transition:transform 0.4s var(--ease-fluid)}
+.pillar-img:hover{transform:scale(1.02)}
+.pillar-content{padding:16px 0}
+.pillar-label{font-family:var(--font-display);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--green);font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.pillar-label::before{content:'';display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--green)}
+.pillar-title{font-family:var(--font-display);font-size:clamp(24px,3vw,32px);font-weight:800;letter-spacing:-0.02em;line-height:1.15;margin-bottom:20px;color:var(--ink)}
+.pillar-body{font-size:15px;color:var(--gray);line-height:1.75;margin-bottom:20px}
+.pillar-body strong{color:var(--ink-soft)}
+.pillar-stats{display:flex;gap:24px;flex-wrap:wrap;margin-top:24px;padding-top:20px;border-top:1px solid var(--gray-border)}
+.pillar-stat{text-align:center}
+.pillar-stat-val{font-family:var(--font-display);font-size:28px;font-weight:900;color:var(--green);line-height:1}
+.pillar-stat-label{font-size:11px;color:var(--gray-light);text-transform:uppercase;letter-spacing:0.08em;margin-top:6px;font-family:var(--font-display);font-weight:600}
+.pillar-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.pillar-tag{font-size:12px;font-family:var(--font-display);font-weight:600;color:var(--green-deep);background:rgba(102,159,56,0.08);padding:6px 14px;border-radius:100px}
+
+/* ===== BLOG / LATEST UPDATES ===== */
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:768px){.blog-grid{grid-template-columns:1fr}}
+.blog-card{background:var(--white);border:1px solid var(--gray-border);border-radius:16px;overflow:hidden;transition:all 0.4s var(--ease-fluid);display:flex;flex-direction:column;height:100%}
+.blog-card:hover{box-shadow:0 12px 40px rgba(0,0,0,0.06);border-color:#d1d5db;transform:translateY(-4px)}
+.blog-card-img{width:100%;height:200px;object-fit:cover}
+.blog-card-body{padding:24px;flex:1;display:flex;flex-direction:column}
+.blog-card-date{font-family:var(--font-display);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--gold);margin-bottom:10px}
+.blog-card-text{font-size:14px;color:var(--gray);line-height:1.65;margin-bottom:16px;flex:1;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.blog-card-source{font-size:12px;color:var(--gray-light);font-style:italic;margin-bottom:16px;border-top:1px solid var(--gray-border);padding-top:12px}
+.blog-card-link{font-family:var(--font-display);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--green);display:inline-flex;align-items:center;gap:6px;transition:gap 0.2s}
+.blog-card-link:hover{gap:10px}
+.blog-card-link::after{content:'→'}
+
 /* ===== ENHANCED FOOTER ===== */
 .footer{position:relative;overflow:hidden}
 .footer::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 100%,rgba(102,159,56,0.06) 0%,transparent 50%);pointer-events:none}
@@ -383,13 +418,14 @@ body.loading{overflow:hidden}
 <nav class="nav" id="nav">
   <div class="nav-inner">
     <a href="#" class="nav-logo" aria-label="Shechinah Malaysia Home">
-      <img src="original_images/logo-transparent-bg.png" alt="Shechinah logo" width="142" height="32" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <img src="original_images/logo-transparent-bg.png" alt="Shechinah logo" width="142" height="32" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" style="background:var(--ink);padding:6px 12px;border-radius:8px">
       <span style="display:none;font-family:var(--font-display);font-weight:900;font-size:18px;color:var(--ink);letter-spacing:-0.02em">Shechinah<span style="color:var(--green)">.</span></span>
     </a>
     <div class="nav-links">
-      <a href="#ministries">Ministries</a>
+      <a href="#ministries">What We Do</a>
       <a href="#about">About</a>
       <a href="#timeline">Impact</a>
+      <a href="#updates">Updates</a>
       <a href="#media">Media</a>
       <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
@@ -406,9 +442,10 @@ body.loading{overflow:hidden}
 <!-- ===== MOBILE MENU ===== -->
 <div class="mobile-overlay" id="mobileOverlay"></div>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#ministries" class="mobile-link">Ministries</a>
+  <a href="#ministries" class="mobile-link">What We Do</a>
   <a href="#about" class="mobile-link">About</a>
   <a href="#timeline" class="mobile-link">Impact</a>
+  <a href="#updates" class="mobile-link">Updates</a>
   <a href="#media" class="mobile-link">Media</a>
   <a href="#gallery" class="mobile-link">Gallery</a>
   <a href="#contact" class="mobile-link">Contact</a>
@@ -423,6 +460,7 @@ body.loading{overflow:hidden}
   <div class="hero-overlay"></div>
   <div class="hero-mesh"></div>
   <div class="hero-content">
+    <img src="original_images/logo-transparent-bg.png" alt="Shechinah Malaysia" class="hero-logo reveal" style="width:clamp(180px,25vw,320px);height:auto;margin-bottom:20px;filter:drop-shadow(0 4px 20px rgba(0,0,0,0.4))" onerror="this.style.display='none'">
     <p class="hero-badge reveal">Pertubuhan Kebajikan Shechinah Johor Bahru &middot; PPM-006-01-19042018</p>
     <h1 class="hero-headline reveal reveal-delay-1">
       <span class="hl-white">Giving</span> <span class="hl-green">Hope,</span><br>
@@ -466,41 +504,119 @@ body.loading{overflow:hidden}
   </svg>
 </div>
 
-<!-- ===== MINISTRIES ===== -->
-<section class="section" id="ministries">
+<!-- ===== MINISTRIES / WHAT WE DO ===== -->
+<section class="section pillars-section" id="ministries">
   <div class="container">
     <p class="section-label reveal">What We Do</p>
-    <h2 class="section-title reveal reveal-delay-1">Five <span class="st-green">programmes</span>, one mission: <span class="st-gold">restore</span> what was lost.</h2>
+    <h2 class="section-title reveal reveal-delay-1" style="max-width:800px">Five <span class="st-green">pillars</span> define every action we take. <span class="st-gold">Restoration</span> is not a slogan — it is structure.</h2>
 
-    <div class="ministries-grid">
-      <!-- Halfway House — flagship, gets 2x tile -->
-      <div class="ministry-card featured reveal reveal-delay-2">
-        <img src="assets/halfway-house.jpeg" class="feat-img" alt="Halfway House outreach — James Issachar with a beneficiary">
-        <div class="feat-content">
-          <div class="mc-title">Halfway House Programme</div>
-          <div class="mc-desc">Temporary shelter, food, and job placement for former inmates, recovering addicts, and families in crisis. Located at Taman Rinting, JB.</div>
-          <span class="mc-link">Flagship Programme &rarr;</span>
+    <!-- Pillar 1: Halfway House -->
+    <div class="pillar reveal">
+      <img src="assets/halfway-house.jpeg" alt="Shechinah Halfway House provides temporary shelter and rehabilitation for former inmates and recovering addicts in Johor Bahru" class="pillar-img" loading="lazy">
+      <div class="pillar-content">
+        <div class="pillar-label">Flagship Programme</div>
+        <h3 class="pillar-title">Halfway House Programme</h3>
+        <p class="pillar-body">The <strong>Halfway House</strong> is the beating heart of Shechinah Malaysia. Located in Taman Rinting, Johor Bahru, it provides <strong>temporary shelter, daily meals, and structured rehabilitation</strong> for former inmates, recovering addicts, and families in crisis who have nowhere else to turn. Residents are not merely housed — they are walked through a <strong>reintegration pathway</strong> that includes job placement assistance, skills training, and counselling.</p>
+        <p class="pillar-body">Many who arrive have been rejected by family, employers, and society. Shechinah operates on the belief that a prison sentence or addiction history is not a life sentence. The programme partners with local employers willing to give second chances, and maintains a network of counsellors who understand recovery firsthand. <strong>Every resident leaves with more than a bed — they leave with a plan.</strong></p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">Shelter</span>
+          <span class="pillar-tag">Rehabilitation</span>
+          <span class="pillar-tag">Job Placement</span>
+          <span class="pillar-tag">Counselling</span>
+        </div>
+        <div class="pillar-stats">
+          <div class="pillar-stat"><div class="pillar-stat-val">6,500+</div><div class="pillar-stat-label">Shelters Given</div></div>
+          <div class="pillar-stat"><div class="pillar-stat-val">150+</div><div class="pillar-stat-label">Active Volunteers</div></div>
+          <div class="pillar-stat"><div class="pillar-stat-val">Since 2018</div><div class="pillar-stat-label">Continuous Operation</div></div>
         </div>
       </div>
+    </div>
 
-      <div class="ministry-card reveal reveal-delay-2">
-        <div class="mc-title">Meals of Hope &amp; Love</div>
-        <div class="mc-desc">500+ meals delivered monthly. Started during COVID-19, now a permanent lifeline for the hungry across Johor Bahru.</div>
+    <!-- Pillar 2: Meals of Hope -->
+    <div class="pillar reveal">
+      <img src="assets/elderly-visit.jpg" alt="Shechinah volunteers delivering meals to elderly and homeless communities across Johor Bahru" class="pillar-img" loading="lazy">
+      <div class="pillar-content">
+        <div class="pillar-label">Emergency &amp; Sustained Aid</div>
+        <h3 class="pillar-title">Meals of Hope &amp; Love</h3>
+        <p class="pillar-body">What began as an <strong>emergency COVID-19 food distribution</strong> in 2020 has become a permanent lifeline. <strong>500+ meals are delivered monthly</strong> to the homeless, hungry, and homebound elderly across Johor Bahru — rain or shine, holiday or workday. The programme does not discriminate by race, religion, or background. If someone is hungry, they eat.</p>
+        <p class="pillar-body">The Meals of Hope programme operates through a network of volunteer drivers, cooks, and coordinators who prepare and distribute hot meals, dry goods, and clean water to identified communities. Beyond food, the regular contact builds <strong>trust and relationships</strong> that open doors to deeper intervention — shelter referrals, medical connections, and family reunification. A meal is often the first handshake in a longer journey of restoration.</p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">500+ Meals/Month</span>
+          <span class="pillar-tag">Homeless Outreach</span>
+          <span class="pillar-tag">Elderly Care</span>
+          <span class="pillar-tag">Emergency Relief</span>
+        </div>
+        <div class="pillar-stats">
+          <div class="pillar-stat"><div class="pillar-stat-val">3,000+</div><div class="pillar-stat-label">Families Fed</div></div>
+          <div class="pillar-stat"><div class="pillar-stat-val">500+</div><div class="pillar-stat-label">Monthly Meals</div></div>
+          <div class="pillar-stat"><div class="pillar-stat-val">Since 2020</div><div class="pillar-stat-label">Permanent Programme</div></div>
+        </div>
       </div>
+    </div>
 
-      <div class="ministry-card reveal reveal-delay-3">
-        <div class="mc-title">Rural People Development</div>
-        <div class="mc-desc">English tuition, clean water initiatives, and job placement serving 4 Orang Asli villages across Johor.</div>
+    <!-- Pillar 3: Rural People Development -->
+    <div class="pillar reveal">
+      <img src="assets/rural-development.jpeg" alt="Shechinah rural development team working with Orang Asli communities in Johor" class="pillar-img" loading="lazy">
+      <div class="pillar-content">
+        <div class="pillar-label">Community Development</div>
+        <h3 class="pillar-title">Rural People Development</h3>
+        <p class="pillar-body">Shechinah serves <strong>4 Orang Asli villages across Johor</strong> — not as outsiders bearing gifts, but as long-term partners. The Rural People Development programme delivers <strong>English tuition for children, clean water infrastructure, agricultural support, and job placement</strong> for rural youth seeking employment in nearby towns. The goal is not dependency. It is dignity through self-sufficiency.</p>
+        <p class="pillar-body">Major interventions include flood relief to Kota Tinggi and Pasir Salam (January 2024), Wesak Day cultural engagement at Kampung Orang Asli Seletar, Sungai Temon (May 2024), and ongoing partnerships with Raffles University, Bayer Malaysia, and Newcastle Medical University for health screenings and educational support. <strong>When a village is strengthened, the whole region benefits.</strong></p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">4 Villages</span>
+          <span class="pillar-tag">Education</span>
+          <span class="pillar-tag">Clean Water</span>
+          <span class="pillar-tag">Job Placement</span>
+        </div>
+        <div class="pillar-stats">
+          <div class="pillar-stat"><div class="pillar-stat-val">4</div><div class="pillar-stat-label">Active Villages</div></div>
+          <div class="pillar-stat"><div class="pillar-stat-val">University</div><div class="pillar-stat-label">Partnerships</div></div>
+          <div class="pillar-stat"><div class="pillar-stat-val">Ongoing</div><div class="pillar-stat-label">Since 2019</div></div>
+        </div>
       </div>
+    </div>
 
-      <div class="ministry-card reveal reveal-delay-4">
-        <div class="mc-title">Prayer &amp; Counselling</div>
-        <div class="mc-desc">Support for domestic violence survivors, addiction recovery, and families in crisis. Real people who've been there.</div>
+    <!-- Pillar 4: Prayer & Counselling -->
+    <div class="pillar reveal">
+      <img src="assets/prayer.jpg" alt="Shechinah prayer and counselling session for individuals in crisis" class="pillar-img" loading="lazy">
+      <div class="pillar-content">
+        <div class="pillar-label">Holistic Care</div>
+        <h3 class="pillar-title">Prayer &amp; Counselling</h3>
+        <p class="pillar-body">Restoration is not only material. Shechinah's <strong>Prayer &amp; Counselling</strong> programme provides emotional and spiritual support for <strong>domestic violence survivors, recovering addicts, and families in crisis</strong>. The counsellors are not detached professionals — many are volunteers who have walked through their own valleys and emerged with wisdom to share.</p>
+        <p class="pillar-body">The programme operates from the Halfway House and through mobile outreach, meeting people where they are — under bridges, in hospital wards, and in living rooms where hope has run thin. Sessions are confidential, culturally sensitive, and free of charge. <strong>We do not proselytise. We listen, we pray for those who ask, and we walk alongside without judgment.</strong></p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">Confidential</span>
+          <span class="pillar-tag">Domestic Violence</span>
+          <span class="pillar-tag">Addiction Recovery</span>
+          <span class="pillar-tag">Mobile Outreach</span>
+        </div>
+        <div class="pillar-stats">
+          <div class="pillar-stat"><div class="pillar-stat-val">Free</div><div class="pillar-stat-label">Of Charge</div></div>
+          <div class="pillar-stat"><div class="pillar-stat-val">Trained</div><div class="pillar-stat-label">Volunteers</div></div>
+          <div class="pillar-stat"><div class="pillar-stat-val">24/7</div><div class="pillar-stat-label">Crisis Line</div></div>
+        </div>
       </div>
+    </div>
 
-      <div class="ministry-card reveal reveal-delay-5">
-        <div class="mc-title">Skills Programmes</div>
-        <div class="mc-desc">Job readiness training, vocational skills, and reintegration support for shelter residents and rural youth.</div>
+    <!-- Pillar 5: Skills Programmes -->
+    <div class="pillar reveal">
+      <img src="assets/skill-programs.jpeg" alt="Shechinah skills training and vocational certification programme for residents and rural youth" class="pillar-img" loading="lazy">
+      <div class="pillar-content">
+        <div class="pillar-label">Economic Empowerment</div>
+        <h3 class="pillar-title">Skills &amp; Vocational Programmes</h3>
+        <p class="pillar-body">A bed and a meal buy time. A skill buys a future. Shechinah's <strong>Skills &amp; Vocational Programmes</strong> provide job readiness training, vocational certification, and reintegration support for Halfway House residents and rural youth. Courses include basic computer literacy, construction skills, food handling certification, and interview coaching.</p>
+        <p class="pillar-body">Graduates receive certificates recognised by local employers, and the programme maintains active job placement partnerships with businesses in Johor Bahru willing to hire former residents. The emphasis is on <strong>financial independence and long-term stability</strong> — not temporary relief. When a resident earns their first paycheque, the entire community is strengthened.</p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">Certification</span>
+          <span class="pillar-tag">Job Coaching</span>
+          <span class="pillar-tag">Employer Network</span>
+          <span class="pillar-tag">Financial Literacy</span>
+        </div>
+        <div class="pillar-stats">
+          <div class="pillar-stat"><div class="pillar-stat-val">Certified</div><div class="pillar-stat-label">Courses</div></div>
+          <div class="pillar-stat"><div class="pillar-stat-val">Employer</div><div class="pillar-stat-label">Partners</div></div>
+          <div class="pillar-stat"><div class="pillar-stat-val">100%</div><div class="pillar-stat-label">Free Training</div></div>
+        </div>
       </div>
     </div>
   </div>
@@ -595,6 +711,85 @@ body.loading{overflow:hidden}
   </svg>
 </div>
 
+<!-- ===== LATEST UPDATES / FACEBOOK FEED ===== -->
+<section class="section" id="updates" style="background:var(--gray-bg)">
+  <div class="container">
+    <p class="section-label reveal">Latest Updates</p>
+    <h2 class="section-title reveal reveal-delay-1">Fresh from the field. <span class="st-green">Real stories.</span></h2>
+    <p class="reveal reveal-delay-1" style="font-size:15px;color:var(--gray);max-width:640px;margin-bottom:40px;line-height:1.65">These updates are pulled directly from our <a href="https://www.facebook.com/shechinahmalaysia" target="_blank" rel="noopener" style="color:var(--green);font-weight:600">Facebook page</a>, where we post weekly about outreach, needs, and victories. Click through to read the full post and see the conversation.</p>
+
+    <div class="blog-grid">
+      <article class="blog-card reveal">
+        <img src="assets/fb/fb-fire-shalom.jpg" alt="Fire damage at Shalom Ria Old Folks Home requiring emergency relocation" class="blog-card-img" loading="lazy">
+        <div class="blog-card-body">
+          <div class="blog-card-date">Emergency Update · Facebook</div>
+          <p class="blog-card-text"><strong>A recent fire left the Shalom Ria Old Folks Home unsafe for living,</strong> forcing the elderly residents and OKU occupants to be temporarily relocated. It was a difficult time… <strong>Shechinah stepped in to provide emergency food, temporary shelter coordination, and volunteer support</strong> during the relocation period. When crisis hits the most vulnerable, response speed matters.</p>
+          <p class="blog-card-source">Posted on Facebook · verbatim excerpt</p>
+          <a href="https://www.facebook.com/shechinahmalaysia" target="_blank" rel="noopener" class="blog-card-link">View on Facebook</a>
+        </div>
+      </article>
+
+      <article class="blog-card reveal reveal-delay-1">
+        <img src="assets/fb/fb-every-life.jpg" alt="Every life has a story — Shechinah restoration video" class="blog-card-img" loading="lazy">
+        <div class="blog-card-body">
+          <div class="blog-card-date">Story · Facebook Video</div>
+          <p class="blog-card-text"><strong>Every life has a story. Some stories fall apart before they are rebuilt again.</strong> This video shares the journey of individuals who walked through brokenness and found restoration through community, counselling, and consistent care. <strong>Restoration is not instant — it is built one decision, one volunteer, one meal at a time.</strong></p>
+          <p class="blog-card-source">Posted on Facebook · verbatim excerpt</p>
+          <a href="https://www.facebook.com/shechinahmalaysia" target="_blank" rel="noopener" class="blog-card-link">View on Facebook</a>
+        </div>
+      </article>
+
+      <article class="blog-card reveal reveal-delay-2">
+        <img src="assets/fb/fb-donation-qr.jpg" alt="Shechinah Malaysia DuitNow QR code for donations" class="blog-card-img" loading="lazy">
+        <div class="blog-card-body">
+          <div class="blog-card-date">Donation · Facebook</div>
+          <p class="blog-card-text"><strong>Donations made easy with our new QR!</strong> Scan to donate and support our charity. Every contribution goes directly to shelter operations, meal distribution, and rural outreach. No administrative overhead — <strong>just direct help for real people.</strong> Bank transfer details also available for corporate donors.</p>
+          <p class="blog-card-source">Posted on Facebook · verbatim excerpt</p>
+          <a href="https://www.facebook.com/shechinahmalaysia" target="_blank" rel="noopener" class="blog-card-link">View on Facebook</a>
+        </div>
+      </article>
+
+      <article class="blog-card reveal">
+        <img src="assets/halfway-house.jpeg" alt="Halfway House residents daily life glimpse" class="blog-card-img" loading="lazy">
+        <div class="blog-card-body">
+          <div class="blog-card-date">Field Visit · Facebook</div>
+          <p class="blog-card-text"><strong>A recent visit to the Halfway House offered a meaningful glimpse into the daily lives of the residents,</strong> reminding us that beyond providing shelter, it is consistent care, structured routine, and genuine human connection that rebuilds dignity. Residents cook together, attend counselling sessions, and prepare for job interviews as a community.</p>
+          <p class="blog-card-source">Posted on Facebook · verbatim excerpt</p>
+          <a href="https://www.facebook.com/shechinahmalaysia" target="_blank" rel="noopener" class="blog-card-link">View on Facebook</a>
+        </div>
+      </article>
+
+      <article class="blog-card reveal reveal-delay-1">
+        <img src="assets/elderly-visit.jpg" alt="Mr Gomes and Shechinah volunteers helping families in hardship" class="blog-card-img" loading="lazy">
+        <div class="blog-card-body">
+          <div class="blog-card-date">Community Support · Facebook</div>
+          <p class="blog-card-text"><strong>In moments of hardship, kindness becomes the light that carries people forward.</strong> Recently, Shechinah Association JB, with the generous support of Mr. Gomes, stepped in to provide emergency relief to a family in crisis. This is how community works — not through institutions, but through neighbours who refuse to look away.</p>
+          <p class="blog-card-source">Posted on Facebook · verbatim excerpt</p>
+          <a href="https://www.facebook.com/shechinahmalaysia" target="_blank" rel="noopener" class="blog-card-link">View on Facebook</a>
+        </div>
+      </article>
+
+      <article class="blog-card reveal reveal-delay-2">
+        <img src="assets/seeds.jpg" alt="Shechinah Malaysia e-brochure and organisational overview" class="blog-card-img" loading="lazy">
+        <div class="blog-card-body">
+          <div class="blog-card-date">Organisation · Facebook</div>
+          <p class="blog-card-text"><strong>About us! View our new e-brochure!</strong> A comprehensive look at Shechinah Malaysia's programmes, impact statistics, volunteer opportunities, and partnership options. Download and share with your church, company, or community group. <strong>Restoration grows when more people know what is possible.</strong></p>
+          <p class="blog-card-source">Posted on Facebook · verbatim excerpt</p>
+          <a href="https://www.facebook.com/shechinahmalaysia" target="_blank" rel="noopener" class="blog-card-link">View on Facebook</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BATIK DIVIDER ===== -->
+<div class="batik-divider" aria-hidden="true">
+  <svg viewBox="0 0 1200 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 12 Q30 0 60 12 Q90 24 120 12 Q150 0 180 12 Q210 24 240 12 Q270 0 300 12 Q330 24 360 12 Q390 0 420 12 Q450 24 480 12 Q510 0 540 12 Q570 24 600 12 Q630 0 660 12 Q690 24 720 12 Q750 0 780 12 Q810 24 840 12 Q870 0 900 12 Q930 24 960 12 Q990 0 1020 12 Q1050 24 1080 12 Q1110 0 1140 12 Q1170 24 1200 12" stroke="#669F38" stroke-width="1.5" fill="none"/>
+    <path d="M0 16 Q40 8 80 16 Q120 24 160 16 Q200 8 240 16 Q280 24 320 16" stroke="#F9A107" stroke-width="1" fill="none" opacity="0.5"/>
+  </svg>
+</div>
+
 <!-- ===== MEDIA COVERAGE ===== -->
 <section class="section" id="media">
   <div class="container">
@@ -644,36 +839,36 @@ body.loading{overflow:hidden}
     <h2 class="section-title reveal reveal-delay-1">Snapshots of <span class="st-green">hope</span> in action.</h2>
     <div class="gallery-grid">
       <div class="gallery-item reveal" data-lightbox="assets/gallery1.jpg" data-caption="Volunteer Outreach">
-        <img src="assets/gallery1.jpg" alt="Shechinah volunteers at work" loading="lazy">
+        <img src="assets/gallery1.jpg" alt="Shechinah volunteers at work distributing food and supplies" loading="lazy">
         <div class="gallery-overlay"><span>Volunteer Outreach</span></div>
       </div>
-      <div class="gallery-item reveal reveal-delay-1" data-lightbox="assets/gallery2.jpg" data-caption="Community Gathering">
-        <img src="assets/gallery2.jpg" alt="Community gathering" loading="lazy">
-        <div class="gallery-overlay"><span>Community Gathering</span></div>
+      <div class="gallery-item reveal reveal-delay-1" data-lightbox="assets/fb/fb-fire-shalom.jpg" data-caption="Emergency response after fire at Shalom Ria Old Folks Home">
+        <img src="assets/fb/fb-fire-shalom.jpg" alt="Shechinah emergency response team at Shalom Ria Old Folks Home fire scene" loading="lazy">
+        <div class="gallery-overlay"><span>Emergency Response · Shalom Fire</span></div>
       </div>
-      <div class="gallery-item reveal reveal-delay-2" data-lightbox="assets/halfway-house.jpeg" data-caption="Halfway House Programme">
-        <img src="assets/halfway-house.jpeg" alt="Halfway House programme" loading="lazy">
+      <div class="gallery-item reveal reveal-delay-2" data-lightbox="assets/halfway-house.jpeg" data-caption="Halfway House Programme — daily life and rehabilitation">
+        <img src="assets/halfway-house.jpeg" alt="Halfway House programme residents in daily rehabilitation activities" loading="lazy">
         <div class="gallery-overlay"><span>Halfway House</span></div>
       </div>
-      <div class="gallery-item reveal reveal-delay-3" data-lightbox="assets/group-certificates.jpg" data-caption="Programme Graduation">
-        <img src="assets/group-certificates.jpg" alt="Programme graduation" loading="lazy">
+      <div class="gallery-item reveal reveal-delay-3" data-lightbox="assets/group-certificates.jpg" data-caption="Skills Programme Graduation Ceremony">
+        <img src="assets/group-certificates.jpg" alt="Shechinah skills programme graduation with certificates" loading="lazy">
         <div class="gallery-overlay"><span>Graduation Day</span></div>
       </div>
-      <div class="gallery-item reveal" data-lightbox="assets/prayer.jpg" data-caption="Prayer &amp; Counselling">
-        <img src="assets/prayer.jpg" alt="Prayer and counselling" loading="lazy">
+      <div class="gallery-item reveal" data-lightbox="assets/prayer.jpg" data-caption="Prayer and Counselling Session">
+        <img src="assets/prayer.jpg" alt="Shechinah prayer and counselling volunteers supporting individuals in crisis" loading="lazy">
         <div class="gallery-overlay"><span>Prayer &amp; Counselling</span></div>
       </div>
-      <div class="gallery-item reveal reveal-delay-1" data-lightbox="assets/rural-development.jpeg" data-caption="Rural Outreach">
-        <img src="assets/rural-development.jpeg" alt="Rural development" loading="lazy">
+      <div class="gallery-item reveal reveal-delay-1" data-lightbox="assets/rural-development.jpeg" data-caption="Rural Development in Orang Asli Villages">
+        <img src="assets/rural-development.jpeg" alt="Shechinah rural development team with Orang Asli community members" loading="lazy">
         <div class="gallery-overlay"><span>Rural Outreach</span></div>
       </div>
-      <div class="gallery-item reveal reveal-delay-2" data-lightbox="assets/skill-programs.jpeg" data-caption="Skills Training">
-        <img src="assets/skill-programs.jpeg" alt="Skills training" loading="lazy">
+      <div class="gallery-item reveal reveal-delay-2" data-lightbox="assets/skill-programs.jpeg" data-caption="Vocational Skills Training">
+        <img src="assets/skill-programs.jpeg" alt="Shechinah vocational skills training session for residents and rural youth" loading="lazy">
         <div class="gallery-overlay"><span>Skills Training</span></div>
       </div>
-      <div class="gallery-item reveal reveal-delay-3" data-lightbox="assets/seeds.jpg" data-caption="Seeds of Hope">
-        <img src="assets/seeds.jpg" alt="Planting seeds of hope" loading="lazy">
-        <div class="gallery-overlay"><span>Seeds of Hope</span></div>
+      <div class="gallery-item reveal reveal-delay-3" data-lightbox="assets/fb/fb-donation-qr.jpg" data-caption="DuitNow QR Code for Donations">
+        <img src="assets/fb/fb-donation-qr.jpg" alt="Shechinah Malaysia DuitNow donation QR code for instant bank transfer" loading="lazy">
+        <div class="gallery-overlay"><span>Donate via QR</span></div>
       </div>
     </div>
   </div>
@@ -832,6 +1027,7 @@ body.loading{overflow:hidden}
         <a href="#ministries">Rural Development</a>
         <a href="#ministries">Prayer &amp; Counselling</a>
         <a href="#ministries">Skills Programmes</a>
+        <a href="#updates">Latest Updates</a>
       </div>
       <div>
         <h4>Connect</h4>
@@ -844,6 +1040,7 @@ body.loading{overflow:hidden}
       <div>
         <h4>Support</h4>
         <a href="#donate">Donate Now</a>
+        <a href="#updates">Latest Updates</a>
         <a href="#media">Media Coverage</a>
         <a href="#timeline">Our Impact</a>
         <a href="#hero">Back to Top</a>
