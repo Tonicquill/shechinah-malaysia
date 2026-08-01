@@ -9,7 +9,7 @@
 
 **What we do:** Walk alongside people — former inmates, recovering addicts, Orang Asli communities, families in crisis — restoring dignity and giving hope through five core programmes.
 
-**How we're different:** Not transactional aid. Relational restoration. James Issachar and his 150 volunteers don't just drop off supplies — they stay until people can stand on their own.
+**How we're different:** Not transactional aid. Relational restoration. James Issachar and his 50 volunteers don't just drop off supplies — they stay until people can stand on their own.
 
 ## 2. Five Brand Pillars
 
