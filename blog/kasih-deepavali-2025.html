@@ -32,38 +32,31 @@ a:hover{text-decoration:underline}
 .article-body p:last-child{margin-bottom:0}
 .article-body strong{font-weight:600;color:var(--navy-deep)}
 
-/* Event card */
-.event-card{background:var(--gray-bg);border-radius:14px;padding:28px;margin:28px 0;border-left:4px solid var(--green)}
-.event-card h3{font-family:var(--font-display);font-size:18px;font-weight:700;margin-bottom:16px;color:var(--navy)}
-.event-detail{display:flex;align-items:flex-start;gap:12px;margin-bottom:12px;font-size:15px}
-.event-detail .icon{font-size:18px;flex-shrink:0;width:24px;text-align:center}
-.event-detail .label{font-weight:600;color:var(--navy-deep);min-width:70px}
+/* Event details card */
+.event-card{background:var(--gray-bg);border-radius:14px;padding:24px;margin:28px 0;border-left:4px solid var(--green)}
+.event-card h3{font-family:var(--font-display);font-size:16px;font-weight:700;margin-bottom:14px;color:var(--navy)}
+.event-detail{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;font-size:14px}
+.event-detail .icon{font-size:16px;flex-shrink:0;width:22px;text-align:center}
+.event-detail .label{font-weight:600;color:var(--navy-deep);min-width:60px}
 .event-detail .value{color:var(--gray)}
 
-/* Itinerary */
-.itinerary{margin:24px 0}
-.itinerary h4{font-family:var(--font-display);font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--gold);margin-bottom:14px}
-.itinerary-item{display:flex;gap:16px;padding:10px 0;border-bottom:1px solid var(--gray-border)}
-.itinerary-item:last-child{border-bottom:none}
-.itinerary-time{font-family:var(--font-display);font-size:12px;font-weight:700;color:var(--green);min-width:90px;flex-shrink:0}
-.itinerary-text{font-size:14px;color:var(--navy)}
-
-/* Lists */
-.team-list,.sponsor-list{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:12px 0}
-.team-list li,.sponsor-list li{font-size:14px;color:var(--gray);list-style:none;padding-left:16px;position:relative}
-.team-list li::before,.sponsor-list li::before{content:'•';position:absolute;left:0;color:var(--green);font-weight:700}
-@media(max-width:480px){.team-list,.sponsor-list{grid-template-columns:1fr}}
-
 /* Video */
-.feature-video{width:100%;border-radius:12px;margin:24px 0;background:var(--navy-deep)}
-.feature-video video{width:100%;border-radius:12px;display:block}
+.feature-video{width:100%;border-radius:12px;margin:24px 0;background:var(--navy-deep);overflow:hidden}
+.feature-video video{width:100%;display:block}
 
-.note-box{background:#FEF9F0;border-left:4px solid var(--gold);padding:16px 20px;border-radius:0 10px 10px 0;margin:20px 0;font-size:14px;color:var(--navy)}
-.note-box strong{color:var(--gold)}
+/* Gallery */
+.gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:24px 0}
+.gallery-grid img{width:100%;height:auto;border-radius:8px;object-fit:cover}
+
+/* Videos section */
+.video-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
+.video-grid video{width:100%;border-radius:8px;background:var(--gray-bg)}
 
 @media(max-width:640px){
   .article-title{font-size:28px}
   .container{padding:0 16px}
+  .gallery-grid{grid-template-columns:1fr}
+  .video-grid{grid-template-columns:1fr}
 }
 .site-footer{border-top:1px solid var(--gray-border);padding:24px 0;text-align:center;font-size:13px;color:var(--gray-light)}
 </style>
@@ -82,7 +75,35 @@ a:hover{text-decoration:underline}
       <h1 class="article-title">Kasih Deepavali 2025 – Food Bag Distribution</h1>
     </header>
     <div class="article-body">
-      <p>In conjunction with the Deepavali Festival, Shechinah Association Johor Bahru and Caritas MJD Centre distributed <strong>40 food bags</strong> with essential items and festive treats to B40 students of SMK Saint Joseph (B), Larkin Jaya.</p>
+      <p>We were truly privileged to be invited to organize the <strong>Kasih Deepavali Food Aid Giving</strong> for the B40 community students of <strong>SMK St. Joseph, Larkin</strong>. This meaningful initiative brought together caring hearts from all walks of life to ensure that every child could experience the joy and warmth of the Deepavali season.</p>
+
+      <p>Our sincere appreciation goes to <strong>Teacher Kani</strong>, whose dedication and coordination made the event smooth and impactful, and to <strong>Principal En. Suhaimi</strong>, whose support opened the doors for this act of kindness.</p>
+
+      <p>This event was a joint collaboration between <strong>Shechinah Association Johor Bahru</strong> and <strong>Caritas MJD</strong>, with the presence of <strong>Bro. Andrew</strong> and <strong>Bro. Albert</strong>, who graced the day with their presence.</p>
+
+      <p>We are also deeply thankful for the generous contributions from various partners and suppliers who came forward to make this possible:</p>
+
+      <p>— <strong>Pemborong Sayur Jeeva</strong> (vegetables)<br>
+      — <strong>Food Bank 448</strong> (chicken)<br>
+      — <strong>Pusat Jagaan Kanak-kanak Shalom Ria</strong> (rice)<br>
+      — <strong>Future Foods</strong> (dry food)<br>
+      — <strong>Caritas & SAJB</strong> (dry food)</br>
+      — <strong>Jeremiah</strong> (rice)</p>
+
+      <p>A special thanks to <strong>Mr. Jeeva</strong>, who not only provided goods but also took the time to inspire the students — showcasing his big bikes and sharing valuable words on motivation, hard work, and life achievements. His presence brought excitement and a sense of aspiration among the students.</p>
+
+      <p><strong>Kasih Deepavali</strong> was more than just a food aid program — it was a reminder that compassion transcends backgrounds, and that the light of kindness shines brightest when shared.</p>
+
+      <p>As we celebrate this season of light, may every child and family touched by this effort be blessed with hope, joy, and the spirit of renewal. Together, we continue to build a Malaysia where unity and love for one another illuminate every heart.</p>
+
+      <div class="event-card">
+        <h3>Event Details</h3>
+        <div class="event-detail"><span class="icon">📅</span><span class="label">Date:</span><span class="value">Friday, 10 October 2025</span></div>
+        <div class="event-detail"><span class="icon">🕘</span><span class="label">Time:</span><span class="value">9.00 AM – 11.00 AM</span></div>
+        <div class="event-detail"><span class="icon">📍</span><span class="label">Venue:</span><span class="value">Dewan Jauhar, SMK Saint Joseph (B), Jalan Garuda, Larkin Jaya, Johor Bahru</span></div>
+        <div class="event-detail"><span class="icon">👥</span><span class="label">Team:</span><span class="value">Manoel Gomes, Mindasani, James, Meera, Helen, Charlie, Albert, Andrew</span></div>
+        <div class="event-detail"><span class="icon">🎁</span><span class="label">Bags:</span><span class="value">40 food bags distributed to B40 students</span></div>
+      </div>
 
       <div class="feature-video">
         <video controls preload="metadata" poster="../assets/kasih-deepavali-1.jpg">
@@ -91,86 +112,67 @@ a:hover{text-decoration:underline}
         </video>
       </div>
 
-      <div class="event-card">
-        <h3>Event Details</h3>
-        <div class="event-detail">
-          <span class="icon">📅</span>
-          <span class="label">Date:</span>
-          <span class="value">Friday, 10 October 2025</span>
-        </div>
-        <div class="event-detail">
-          <span class="icon">🕘</span>
-          <span class="label">Time:</span>
-          <span class="value">9.00 AM – 11.00 AM</span>
-        </div>
-        <div class="event-detail">
-          <span class="icon">📍</span>
-          <span class="label">Venue:</span>
-          <span class="value">Dewan Jauhar, SMK Saint Joseph (B), Jalan Garuda, Larkin Jaya, Johor Bahru</span>
-        </div>
+      <div class="gallery-grid">
+        <img src="../assets/kasih-deepavali-1.jpg" alt="Kasih Deepavali event at SMK St. Joseph Larkin">
+        <img src="../assets/kasih-deepavali-2.jpg" alt="Food aid distribution to B40 community students">
+        <img src="../assets/kasih-deepavali-3.jpg" alt="Volunteers and students at Kasih Deepavali">
+        <img src="../assets/kasih-deepavali-4.jpg" alt="Mr Jeeva inspiring students with his big bikes">
+        <img src="../assets/kasih-deepavali-5.jpg" alt="Shechinah Association and Caritas MJD collaboration">
+        <img src="../assets/kasih-deepavali-6.jpg" alt="Community coming together for Deepavali">
+        <img src="../assets/kasih-deepavali-8.jpg" alt="Kasih Deepavali event">
+        <img src="../assets/kasih-deepavali-10.jpg" alt="Kasih Deepavali event">
+        <img src="../assets/kasih-deepavali-12.jpg" alt="Kasih Deepavali event">
+        <img src="../assets/kasih-deepavali-14.jpg" alt="Kasih Deepavali event">
+        <img src="../assets/kasih-deepavali-16.jpg" alt="Kasih Deepavali event">
+        <img src="../assets/kasih-deepavali-18.jpg" alt="Kasih Deepavali event">
+        <img src="../assets/kasih-deepavali-20.jpg" alt="Kasih Deepavali event">
+        <img src="../assets/kasih-deepavali-22.jpg" alt="Kasih Deepavali event">
+        <img src="../assets/kasih-deepavali-24.jpg" alt="Kasih Deepavali event">
+        <img src="../assets/kasih-deepavali-26.jpg" alt="Kasih Deepavali event">
+        <img src="../assets/kasih-deepavali-28.jpg" alt="Kasih Deepavali event">
+        <img src="../assets/kasih-deepavali-30.jpg" alt="Kasih Deepavali event">
+        <img src="../assets/kasih-deepavali-32.jpg" alt="Kasih Deepavali event">
+        <img src="../assets/kasih-deepavali-34.jpg" alt="Kasih Deepavali event">
+        <img src="../assets/kasih-deepavali-36.jpg" alt="Kasih Deepavali event">
+        <img src="../assets/kasih-deepavali-38.jpg" alt="Kasih Deepavali event">
+        <img src="../assets/kasih-deepavali-40.jpg" alt="Kasih Deepavali event">
+        <img src="../assets/kasih-deepavali-42.jpg" alt="Kasih Deepavali event">
+        <img src="../assets/kasih-deepavali-44.jpg" alt="Kasih Deepavali event">
+        <img src="../assets/kasih-deepavali-46.jpg" alt="Kasih Deepavali event">
+        <img src="../assets/kasih-deepavali-48.jpg" alt="Kasih Deepavali event">
+        <img src="../assets/kasih-deepavali-50.jpg" alt="Kasih Deepavali event">
+        <img src="../assets/kasih-deepavali-52.jpg" alt="Kasih Deepavali event">
+        <img src="../assets/kasih-deepavali-54.jpg" alt="Kasih Deepavali event">
+        <img src="../assets/kasih-deepavali-56.jpg" alt="Kasih Deepavali event">
       </div>
 
-      <div class="itinerary">
-        <h4>Itinerary</h4>
-        <div class="itinerary-item">
-          <div class="itinerary-time">8.00 AM</div>
-          <div class="itinerary-text">Collect goody bags from Caritas JB and proceed to SMK St. Joseph (B), Larkin</div>
-        </div>
-        <div class="itinerary-item">
-          <div class="itinerary-time">8.45 AM</div>
-          <div class="itinerary-text">Unload and arrange items at Dewan Jauhar</div>
-        </div>
-        <div class="itinerary-item">
-          <div class="itinerary-time">9.00 AM</div>
-          <div class="itinerary-text">Display items and programme setup</div>
-        </div>
-        <div class="itinerary-item">
-          <div class="itinerary-time">9.00 AM</div>
-          <div class="itinerary-text">Welcome speech by Principal En. Suhaimi & Speech by Mr. James Issachar (Chairman, Shechinah)</div>
-        </div>
-        <div class="itinerary-item">
-          <div class="itinerary-time">After speeches</div>
-          <div class="itinerary-text">Photo session</div>
-        </div>
-        <div class="itinerary-item">
-          <div class="itinerary-time">After photos</div>
-          <div class="itinerary-text">Tea break and fellowship</div>
-        </div>
-        <div class="itinerary-item">
-          <div class="itinerary-time">11.00 AM</div>
-          <div class="itinerary-text">Dismiss</div>
-        </div>
+      <h3 style="font-family:var(--font-serif);font-size:22px;margin-top:40px;margin-bottom:16px;color:var(--navy)">Videos</h3>
+      <div class="video-grid">
+        <video controls preload="metadata" poster="../assets/kasih-deepavali-1.jpg">
+          <source src="../assets/kasih-deepavali-video-1.mp4" type="video/mp4">
+        </video>
+        <video controls preload="metadata" poster="../assets/kasih-deepavali-2.jpg">
+          <source src="../assets/kasih-deepavali-video-2.mp4" type="video/mp4">
+        </video>
+        <video controls preload="metadata" poster="../assets/kasih-deepavali-3.jpg">
+          <source src="../assets/kasih-deepavali-video-3.mp4" type="video/mp4">
+        </video>
+        <video controls preload="metadata" poster="../assets/kasih-deepavali-4.jpg">
+          <source src="../assets/kasih-deepavali-video-4.mp4" type="video/mp4">
+        </video>
+        <video controls preload="metadata" poster="../assets/kasih-deepavali-5.jpg">
+          <source src="../assets/kasih-deepavali-video-5.mp4" type="video/mp4">
+        </video>
+        <video controls preload="metadata" poster="../assets/kasih-deepavali-1.jpg">
+          <source src="../assets/kasih-deepavali-video-6.mp4" type="video/mp4">
+        </video>
+        <video controls preload="metadata" poster="../assets/kasih-deepavali-2.jpg">
+          <source src="../assets/kasih-deepavali-video-7.mp4" type="video/mp4">
+        </video>
+        <video controls preload="metadata" poster="../assets/kasih-deepavali-3.jpg">
+          <source src="../assets/kasih-deepavali-video-8.mp4" type="video/mp4">
+        </video>
       </div>
-
-      <div class="note-box">
-        <strong>Travel Note:</strong> It takes about 15 minutes to travel from Caritas JB to SMK St. Joseph, and about 20 minutes to load all the bags.
-      </div>
-
-      <p><strong>Team Attending:</strong></p>
-      <ul class="team-list">
-        <li>Manoel Gomes</li>
-        <li>Mindasani</li>
-        <li>James</li>
-        <li>Meera</li>
-        <li>Helen</li>
-        <li>Charlie</li>
-        <li>Albert</li>
-        <li>Andrew</li>
-      </ul>
-
-      <p><strong>Goods Sponsors:</strong></p>
-      <ul class="sponsor-list">
-        <li><strong>Chicken:</strong> Food Bank 448</li>
-        <li><strong>Rice:</strong> Shalom Ria, Jeremiah</li>
-        <li><strong>Vegetables:</strong> Pemborong Sayur Jeeva</li>
-        <li><strong>Dry Food:</strong> Caritas & SAJB</li>
-      </ul>
-
-      <div class="note-box">
-        <strong>Preparation:</strong> Rice and mee hoon were delivered to the school on Thursday, 9 October 2025 as part of the event preparation.
-      </div>
-
-      <p style="margin-top:32px;font-size:15px;color:var(--gray)">→ See also: <a href="kasih-deepavali.html">Kasih Deepavali 2026 – Sharing the Light of Hope</a></p>
     </div>
   </article>
 </main>
