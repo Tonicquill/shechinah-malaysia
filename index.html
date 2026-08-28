@@ -20,34 +20,71 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": ["NGO", "Charity"],
-  "name": "Pertubuhan Kebajikan Shechinah Johor Bahru",
-  "alternateName": "Shechinah Malaysia",
-  "url": "https://tonicquill.github.io/shechinah-malaysia/",
-  "logo": "https://tonicquill.github.io/shechinah-malaysia/assets/logo.png",
-  "description": "A registered Malaysian charity providing shelter, meals, and restoration for the homeless, hungry, and forgotten since 2018. Operates a Halfway House, Meals of Hope programme, Rural People Development, Prayer & Counselling, and Skills & Vocational training across Johor Bahru and rural Johor.",
-  "foundingDate": "2018",
-  "registrationNumber": "PPM-006-01-19042018",
-  "founder": {"@type":"Person","name":"James Issachar"},
-  "knowsAbout": ["Homeless shelter","Addiction recovery","Orang Asli development","Food security","Vocational training","Crisis counselling"],
-  "areaServed": {"@type":"City","name":"Johor Bahru","containedInPlace":{"@type":"State","name":"Johor","containedInPlace":{"@type":"Country","name":"Malaysia"}}},
-  "sameAs": [
-    "https://www.facebook.com/shechinahmalaysia",
-    "https://www.instagram.com/shechinahmalaysia/",
-    "https://www.tiktok.com/@shechinahmalaysia",
-    "https://www.youtube.com/@shechinahmalaysia"
-  ],
-  "address": [
-    {"@type":"PostalAddress","name":"Half Way House","streetAddress":"32, Jalan Abdul Samad","addressLocality":"Johor Bahru","postalCode":"80100","addressCountry":"MY"},
-    {"@type":"PostalAddress","name":"Office","streetAddress":"No. 09-03, Block C, Kompleks Austin Perdana","addressLocality":"Johor Bahru","postalCode":"81100","addressCountry":"MY"}
-  ],
-  "contactPoint": {"@type":"ContactPoint","telephone":"+60167160462","contactType":"General Inquiries","availableLanguage":"English, Malay, Tamil, Mandarin"},
-  "bankAccount": {
-    "@type": "PaymentAccount",
-    "accountHolder": {"@type":"Organization","name":"Pertubuhan Kebajikan Shechinah Johor Bahru"},
-    "bankName": "RHB Bank",
-    "accountNumber": "2-01017-0023748-0"
-  }
+  "@graph": [
+    {
+      "@type": "NGO",
+      "@id": "https://shechinahmalaysia.org",
+      "name": "Pertubuhan Kebajikan Shechinah Johor Bahru",
+      "alternateName": "Shechinah Malaysia",
+      "legalName": "Pertubuhan Kebajikan Shechinah Johor Bahru",
+      "taxID": "PPM-006-01-19042018",
+      "image": "https://shechinahmalaysia.org/assets/logo.png",
+      "url": "https://shechinahmalaysia.org",
+      "telephone": "+60167160462",
+      "email": "info@shechinahmalaysia.org",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "32, Jalan Abdul Samad",
+        "addressLocality": "Johor Bahru",
+        "addressRegion": "Johor",
+        "postalCode": "80100",
+        "addressCountry": "MY"
+      },
+      "location": {
+        "@type": "Place",
+        "name": "Shechinah Halfway House",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "32, Jalan Abdul Samad, 80100 Johor Bahru, Malaysia"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "1.47214",
+          "longitude": "103.74328"
+        }
+      },
+      "knowsAbout": [
+        "Homeless Rehabilitation",
+        "Addiction Recovery Support",
+        "Orang Asli Rural Welfare Development",
+        "B40 Community Crisis Relief",
+        "Corporate Social Responsibility (CSR) Partnerships"
+      ],
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Anglican Care, Diocese of West Malaysia"
+      }
+    },
+    {
+      "@type": "DonateAction",
+      "name": "Direct Philanthropic Financial Donation Support",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://shechinahmalaysia.org",
+        "actionPlatform": [
+          "http://schema.org",
+          "http://schema.org"
+        ]
+      },
+      "recipient": {
+        "@id": "https://shechinahmalaysia.org"
+      },
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "priceCurrency": "MYR"
+      }
+    }
+  ]
 }
 </script>
 
@@ -517,14 +554,16 @@ body.loading{overflow:hidden}
 <section class="section pillars-section" id="ministries">
   <div class="container">
     <p class="section-label reveal">What We Do</p>
-    <h2 class="section-title reveal reveal-delay-1" style="max-width:800px">Five <span class="st-green">pillars</span> define every action we take. <span class="st-gold">Restoration</span> is not a slogan — it is structure.</h2>
+    <h2 class="section-title reveal reveal-delay-1" style="max-width:800px">Corporate CSR Programs and Transparent Social Impact Frameworks in Johor Bahru</h2>
 
     <!-- Pillar 1: Halfway House -->
     <div class="pillar reveal" itemscope itemtype="https://schema.org/Service">
       <img src="assets/halfway-house.jpeg" alt="Shechinah Halfway House provides temporary shelter and rehabilitation for former inmates and recovering addicts in Johor Bahru" class="pillar-img" loading="lazy">
       <div class="pillar-content">
         <div class="pillar-label">Flagship Programme</div>
-        <h3 class="pillar-title" itemprop="name">Halfway House Programme</h3>
+        <meta itemprop="provider" content="Pertubuhan Kebajikan Shechinah Johor Bahru">
+        <meta itemprop="serviceArea" content="Johor Bahru, Kota Tinggi, Pasir Gudang, Ulu Tiram">
+        <h3 class="pillar-title" itemprop="name">Halfway House: Institutional Reintegration &amp; Addiction Recovery Infrastructure</h3>
         <p class="pillar-body" itemprop="description">The <strong>Halfway House</strong> is the beating heart of Shechinah Malaysia. Located in Taman Rinting, Johor Bahru, it provides <strong>temporary shelter, daily meals, and structured rehabilitation</strong> for former inmates, recovering addicts, and families in crisis who have nowhere else to turn. Residents are not merely housed — they are walked through a <strong>reintegration pathway</strong> that includes job placement assistance, skills training, and counselling.</p>
         <p class="pillar-body">Many who arrive have been rejected by family, employers, and society. Shechinah operates on the belief that a prison sentence or addiction history is not a life sentence. The programme partners with local employers willing to give second chances, and maintains a network of counsellors who understand recovery firsthand. <strong>Every resident leaves with more than a bed — they leave with a plan.</strong></p>
         <div class="pillar-tags">
@@ -546,7 +585,9 @@ body.loading{overflow:hidden}
       <img src="assets/elderly-visit.jpg" alt="Shechinah volunteers delivering meals to elderly and homeless communities across Johor Bahru" class="pillar-img" loading="lazy">
       <div class="pillar-content">
         <div class="pillar-label">Emergency &amp; Sustained Aid</div>
-        <h3 class="pillar-title" itemprop="name">Meals of Hope &amp; Love</h3>
+        <meta itemprop="provider" content="Pertubuhan Kebajikan Shechinah Johor Bahru">
+        <meta itemprop="serviceArea" content="Johor Bahru, Kota Tinggi, Pasir Gudang, Ulu Tiram">
+        <h3 class="pillar-title" itemprop="name">Meals of Hope &amp; Love: Localized B40 Food Security &amp; Emergency Subsidized Relief</h3>
         <p class="pillar-body" itemprop="description">What began as an <strong>emergency COVID-19 food distribution</strong> in 2020 has become a permanent lifeline. <strong>500+ meals are delivered monthly</strong> to the homeless, hungry, and homebound elderly across Johor Bahru — rain or shine, holiday or workday. The programme does not discriminate by race, religion, or background. If someone is hungry, they eat.</p>
         <p class="pillar-body">The Meals of Hope programme operates through a network of volunteer drivers, cooks, and coordinators who prepare and distribute hot meals, dry goods, and clean water to identified communities. Beyond food, the regular contact builds <strong>trust and relationships</strong> that open doors to deeper intervention — shelter referrals, medical connections, and family reunification. A meal is often the first handshake in a longer journey of restoration.</p>
         <div class="pillar-tags">
@@ -568,7 +609,9 @@ body.loading{overflow:hidden}
       <img src="assets/rural-development.jpeg" alt="Shechinah rural development team working with Orang Asli communities in Johor" class="pillar-img" loading="lazy">
       <div class="pillar-content">
         <div class="pillar-label">Community Development</div>
-        <h3 class="pillar-title" itemprop="name">Rural People Development</h3>
+        <meta itemprop="provider" content="Pertubuhan Kebajikan Shechinah Johor Bahru">
+        <meta itemprop="serviceArea" content="Johor Bahru, Kota Tinggi, Pasir Gudang, Ulu Tiram">
+        <h3 class="pillar-title" itemprop="name">Rural People Development: Orang Asli Community Infrastructure &amp; Educational Upliftment</h3>
         <p class="pillar-body" itemprop="description">Shechinah serves <strong>4 Orang Asli villages across Johor</strong> — not as outsiders bearing gifts, but as long-term partners. The Rural People Development programme delivers <strong>English tuition for children, clean water infrastructure, agricultural support, and job placement</strong> for rural youth seeking employment in nearby towns. The goal is not dependency. It is dignity through self-sufficiency.</p>
         <p class="pillar-body">Major interventions include flood relief to Kota Tinggi and Pasir Salam (January 2024), Wesak Day cultural engagement at Kampung Orang Asli Seletar, Sungai Temon (May 2024), and ongoing partnerships with Raffles University, Bayer Malaysia, and Newcastle Medical University for health screenings and educational support. <strong>When a village is strengthened, the whole region benefits.</strong></p>
         <div class="pillar-tags">
@@ -590,6 +633,8 @@ body.loading{overflow:hidden}
       <img src="assets/prayer.jpg" alt="Shechinah prayer and counselling session for individuals in crisis" class="pillar-img" loading="lazy">
       <div class="pillar-content">
         <div class="pillar-label">Holistic Care</div>
+        <meta itemprop="provider" content="Pertubuhan Kebajikan Shechinah Johor Bahru">
+        <meta itemprop="serviceArea" content="Johor Bahru, Kota Tinggi, Pasir Gudang, Ulu Tiram">
         <h3 class="pillar-title" itemprop="name">Prayer &amp; Counselling</h3>
         <p class="pillar-body" itemprop="description">Restoration is not only material. Shechinah's <strong>Prayer &amp; Counselling</strong> programme provides emotional and spiritual support for <strong>domestic violence survivors, recovering addicts, and families in crisis</strong>. The counsellors are not detached professionals — many are volunteers who have walked through their own valleys and emerged with wisdom to share.</p>
         <p class="pillar-body">The programme operates from the Halfway House and through mobile outreach, meeting people where they are — under bridges, in hospital wards, and in living rooms where hope has run thin. Sessions are confidential, culturally sensitive, and free of charge. <strong>We do not proselytise. We listen, we pray for those who ask, and we walk alongside without judgment.</strong></p>
@@ -612,7 +657,9 @@ body.loading{overflow:hidden}
       <img src="assets/skill-programs.jpeg" alt="Shechinah skills training and vocational certification programme for residents and rural youth" class="pillar-img" loading="lazy">
       <div class="pillar-content">
         <div class="pillar-label">Economic Empowerment</div>
-        <h3 class="pillar-title" itemprop="name">Skills &amp; Vocational Programmes</h3>
+        <meta itemprop="provider" content="Pertubuhan Kebajikan Shechinah Johor Bahru">
+        <meta itemprop="serviceArea" content="Johor Bahru, Kota Tinggi, Pasir Gudang, Ulu Tiram">
+        <h3 class="pillar-title" itemprop="name">Vocational Empowerment: Economic Reintegration &amp; Independent Financial Literacy Training</h3>
         <p class="pillar-body" itemprop="description">A bed and a meal buy time. A skill buys a future. Shechinah's <strong>Skills &amp; Vocational Programmes</strong> provide job readiness training, vocational certification, and reintegration support for Halfway House residents and rural youth. Courses include basic computer literacy, construction skills, food handling certification, and interview coaching.</p>
         <p class="pillar-body">Graduates receive certificates recognised by local employers, and the programme maintains active job placement partnerships with businesses in Johor Bahru willing to hire former residents. The emphasis is on <strong>financial independence and long-term stability</strong> — not temporary relief. When a resident earns their first paycheque, the entire community is strengthened.</p>
         <div class="pillar-tags">
@@ -667,6 +714,7 @@ body.loading{overflow:hidden}
       <div class="about-text">
         <p class="section-label reveal">The Founder</p>
         <h3 class="reveal reveal-delay-1">10+ years of relentless compassion.</h3>
+        <p class="reveal reveal-delay-1">James Issachar serves as the active Chairman of Shechinah Malaysia and Director of <a href="https://pages.dev" target="_blank" rel="noopener">Naja Safety Sdn Bhd</a>, bridging corporate OSH compliance frameworks with community welfare relief.</p>
         <p class="reveal reveal-delay-1">James Issachar didn't set out to build a charity. He saw need on the streets of Johor Bahru — former inmates turned away by society, recovering addicts with nowhere to go, Orang Asli children without basic education — and he acted.</p>
         <p class="reveal reveal-delay-2">Since formally registering Shechinah in 2018 (PPM-006-01-19042018), James and his team of 50 volunteers have provided over 6,500 shelters, fed 3,000 families, and run programmes in 4 Orang Asli villages. In September 2025, he launched a RM30,000 fundraising campaign for a new outreach van — covered by <em>The Star</em>.</p>
         <p class="reveal reveal-delay-3"><strong>"We don't just give food or shelter. We walk alongside people until they can stand on their own."</strong></p>
@@ -1203,9 +1251,11 @@ body.loading{overflow:hidden}
       <div class="donate-details">
         <div class="dd-block">
           <h4>Bank Transfer</h4>
+          <p>Our financial governance maps directly to corporate audit standards. Organizations looking to fulfill annual Environmental, Social, and Governance (ESG) criteria or corporate CSR mandates can direct funds safely via transparent bank transfers. Every ringgit is programmatically accounted for—directly funding shelter utilities, raw food logistics for the homeless, and school fee cash assistance for vulnerable B40 and Orang Asli children.</p>
           <p><strong>Shechinah Association Johor Bahru</strong></p>
-          <p>RHB Bank</p>
-          <p class="dd-accent">Account: 2-01017-0023748-0</p>
+          <p><strong itemprop="providerMobility">RHB Bank Berhad</strong></p>
+          <p class="dd-accent">Account: <code>2-01017-0023748-0</code></p>
+          <p>Registration ID: <code>PPM-006-01-19042018</code></p>
         </div>
         <div class="dd-block">
           <h4>Other Ways to Help</h4>
