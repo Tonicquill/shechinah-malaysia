@@ -8,12 +8,12 @@
 <meta property="og:title" content="Shechinah Malaysia — Restoring Dignity, Giving Hope">
 <meta property="og:description" content="A registered Malaysian charity providing shelter, meals, and restoration for the homeless, hungry, and forgotten since 2018.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://tonicquill.github.io/shechinah-malaysia/assets/elderly-visit.jpg">
-<meta property="og:url" content="https://tonicquill.github.io/shechinah-malaysia/">
+<meta property="og:image" content="https://shechinahmalaysia.org/assets/elderly-visit.jpg">
+<meta property="og:url" content="https://shechinahmalaysia.org/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Shechinah Malaysia — Restoring Dignity, Giving Hope">
 <meta name="twitter:description" content="A registered Malaysian charity providing shelter, meals, and restoration for the homeless, hungry, and forgotten since 2018.">
-<meta name="twitter:image" content="https://tonicquill.github.io/shechinah-malaysia/assets/elderly-visit.jpg">
+<meta name="twitter:image" content="https://shechinahmalaysia.org/assets/elderly-visit.jpg">
 <link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="preload" as="image" href="assets/elderly-visit.jpg">
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap" rel="stylesheet">
@@ -1281,6 +1281,23 @@ body.loading{overflow:hidden}
         <p style="margin-top:12px"><strong>Half Way House</strong><br>32, Jalan Abdul Samad, 80100 Johor Bahru, Malaysia</p>
         <p style="margin-top:8px"><strong>Office</strong><br>No. 09-03, Block C, Kompleks Austin Perdana, 81100 Johor Bahru, Johor Malaysia</p>
         <p style="margin-top:8px"><strong>Contact</strong><br>Ms. Meera Nair – Secretary: <a href="tel:+60127712023" style="color:var(--green)">012-771 2023</a><br>Mr. James Issachar – Chairman: <a href="tel:+60167160462" style="color:var(--green)">016-716 0462</a><br>Mr. M. Geevananthan – Vice Chairman: <a href="tel:+601116670910" style="color:var(--green)">011-1667 0910</a></p>
+
+        <!-- Facebook Page Plugin -->
+        <div style="margin-top:20px">
+          <div class="fb-page"
+               data-href="https://www.facebook.com/shechinahmalaysia"
+               data-tabs="timeline"
+               data-width="300"
+               data-height="350"
+               data-small-header="true"
+               data-adapt-container-width="true"
+               data-hide-cover="false"
+               data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/shechinahmalaysia" class="fb-xfbml-parse-ignore">
+              <a href="https://www.facebook.com/shechinahmalaysia">Shechinah Malaysia</a>
+            </blockquote>
+          </div>
+        </div>
       </div>
       <div>
         <h4>Programmes</h4>
@@ -1499,6 +1516,33 @@ body.loading{overflow:hidden}
   }
 })();
 </script>
+
+  <!-- Facebook SDK (required for Page Plugin + Messenger Chat) -->
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId            : '',
+        autoLogAppEvents : true,
+        xfbml            : true,
+        version          : 'v22.0'
+      });
+    };
+
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v22.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  <!-- Messenger Chat Plugin -->
+  <div id="fb-root"></div>
+  <div id="fb-customer-chat" class="fb-customerchat"
+       attribution="biz_inbox"
+       page_id="REPLACE_WITH_NUMERIC_PAGE_ID"
+  ></div>
 
 </body>
 </html>
