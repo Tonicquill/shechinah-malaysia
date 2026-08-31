@@ -1294,21 +1294,19 @@ body.loading{overflow:hidden}
         <p style="margin-top:8px"><strong>Office</strong><br>No. 09-03, Block C, Kompleks Austin Perdana, 81100 Johor Bahru, Johor Malaysia</p>
         <p style="margin-top:8px"><strong>Contact</strong><br>Ms. Meera Nair – Secretary: <a href="tel:+60127712023" style="color:var(--green)">012-771 2023</a><br>Mr. James Issachar – Chairman: <a href="tel:+60167160462" style="color:var(--green)">016-716 0462</a><br>Mr. M. Geevananthan – Vice Chairman: <a href="tel:+601116670910" style="color:var(--green)">011-1667 0910</a></p>
 
-        <!-- Facebook Page Plugin -->
-        <div style="margin-top:20px">
-          <div class="fb-page"
-               data-href="https://www.facebook.com/shechinahmalaysia"
-               data-tabs="timeline"
-               data-width="300"
-               data-height="350"
-               data-small-header="true"
-               data-adapt-container-width="true"
-               data-hide-cover="false"
-               data-show-facepile="true">
-            <blockquote cite="https://www.facebook.com/shechinahmalaysia" class="fb-xfbml-parse-ignore">
-              <a href="https://www.facebook.com/shechinahmalaysia">Shechinah Malaysia</a>
-            </blockquote>
-          </div>
+        <!-- Facebook Page Plugin (iframe — no SDK) -->
+        <div style="margin-top:20px;border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,0.08)">
+          <iframe
+            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fshechinahmalaysia%2F&tabs=timeline&width=300&height=350&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true"
+            width="300"
+            height="350"
+            style="border:none;overflow:hidden;display:block"
+            scrolling="no"
+            frameborder="0"
+            allowfullscreen="true"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            title="Shechinah Malaysia Facebook">
+          </iframe>
         </div>
       </div>
       <div>
@@ -1528,26 +1526,6 @@ body.loading{overflow:hidden}
   }
 })();
 </script>
-
-  <!-- Facebook SDK (required for Page Plugin) -->
-  <script>
-    window.fbAsyncInit = function() {
-      FB.init({
-        appId            : '',
-        autoLogAppEvents : true,
-        xfbml            : true,
-        version          : 'v22.0'
-      });
-    };
-
-    (function(d, s, id){
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) {return;}
-      js = d.createElement(s); js.id = id;
-      js.src = "https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v22.0";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-  </script>
 
 </body>
 </html>
